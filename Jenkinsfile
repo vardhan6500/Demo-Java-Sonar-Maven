@@ -24,11 +24,11 @@ stage('Build') {
 }
  
  stage('Sonar') {
-withSonarQubeEnv(credentialsId: 'sonarqubemavenexample') {
-   sh "mvn clean verify sonar:sonar \
-  -Dsonar.projectKey=sonarqube-maven-example \
+  withSonarQubeEnv(credentialsId: 'DemoJavaSonarMaven') {
+    sh  "mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=Demo-Java-Sonar-Maven \
   -Dsonar.host.url=http://43.205.98.92:9000 \
-  -Dsonar.login=sqp_261e2f2747156b223bb05b06135e011fa494ffd6"
-       }
-    }
+  -Dsonar.login=sqp_70ce7af7265e72ababca749a16506d6f6f8173a9"
+}
+}
 }
