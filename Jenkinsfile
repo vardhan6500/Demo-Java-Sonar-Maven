@@ -6,7 +6,7 @@ node {
 // def Dockerhub_URL = params.Dockerhub_URL
 
 stage('Checkout') {
- git credentialsId: 'Github', url: 'https://github.com/leenatejababu/Demo-Java-Sonar-Maven.git'
+ git credentialsId: 'github', url: 'https://github.com/vardhan6500/Demo-Java-Sonar-Maven.git'
  }
 
 
