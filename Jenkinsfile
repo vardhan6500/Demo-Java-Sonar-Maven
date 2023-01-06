@@ -11,7 +11,7 @@ stage('Checkout') {
 
 
 stage('Build') {
-    withMaven(jdk: 'JAVA', maven: 'maven') {
+    withMaven(jdk: 'java', maven: 'maven') {
         
         println "build is running"
         sh 'mvn clean package'
